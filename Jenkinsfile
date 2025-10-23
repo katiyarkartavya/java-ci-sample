@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   tools {
-    jdk 'jdk21'          // matches Tools config
+    jdk 'JDK21'          // matches Tools config
     maven 'Maven_home'    // matches Tools config
   }
 
