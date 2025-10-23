@@ -12,9 +12,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '20'))
   }
 
-  triggers {
-    
-  }
+  
 
   stages {
     stage('Checkout') {
