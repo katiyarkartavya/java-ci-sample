@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   tools {
-    jdk 'jdk17'          // matches Tools config
-    maven 'maven-3.9'    // matches Tools config
+    jdk 'jdk21'          // matches Tools config
+    maven 'Maven_home'    // matches Tools config
   }
 
   options {
@@ -13,8 +13,7 @@ pipeline {
   }
 
   triggers {
-    // Optional: if you configure a GitHub webhook later
-    // githubPush()
+    
   }
 
   stages {
@@ -24,7 +23,7 @@ pipeline {
           $class: 'GitSCM',
           branches: [[name: '*/main']],
           userRemoteConfigs: [[
-            url: 'https://github.com/<your-username>/java-ci-sample.git',
+            url: 'https://github.com/katiyarkartavya/java-ci-sample.git',
             
           ]]
         ])
